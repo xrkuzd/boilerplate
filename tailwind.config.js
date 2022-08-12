@@ -8,6 +8,8 @@ module.exports = withAnimations({
   content: [
     './pages/**/*.{js,ts,jsx,tsx}',
     './components/**/*.{js,ts,jsx,tsx}',
+    "./src/**/*.{js,ts,jsx,tsx}",
+    "./lib/**/*.{js,ts,jsx,tsx}",
   ],
   darkMode: 'class',
   theme: {
@@ -38,5 +40,8 @@ module.exports = withAnimations({
       },
     },
   },
-  plugins: [require('tailwind-scrollbar-hide')],
+  plugins: [
+    require('tailwind-scrollbar-hide'),
+    require('@tailwindcss/forms'),
+  ],
 })
